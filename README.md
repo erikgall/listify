@@ -8,7 +8,6 @@ This project was originally created by [Travis Vignon](https://github.com/lookit
 
 Listify provides the capabilities for sorting and reordering a number of objects in a list. The class that has this specified needs to have a `position` column defined as an integer on the mapped database table. Listify is an Eloquent port of the highly useful Ruby gem `acts_as_list` (https://github.com/swanandp/acts_as_list).
 
-
 [![Latest Stable Version](https://poser.pugx.org/erikgall/laravel-listify/v)](//packagist.org/packages/erikgall/laravel-listify)
 [![Total Downloads](https://poser.pugx.org/erikgall/laravel-listify/downloads)](//packagist.org/packages/erikgall/laravel-listify)
 [![Latest Unstable Version](https://poser.pugx.org/erikgall/laravel-listify/v/unstable)](//packagist.org/packages/erikgall/laravel-listify)
@@ -38,9 +37,17 @@ Listify provides the capabilities for sorting and reordering a number of objects
 
 ## Installation
 
-Simply require Listify in composer.
+Install Listify into your Laravel 8 application with composer:
 
-`composer require erikgall/listify`
+```shell
+$ composer require erikgall/listify
+```
+
+To install Listify into your Laravel 7 application with composer:
+
+```shell
+$ composer require erikgall/listify:^2.0
+```
 
 ## Quickstart
 
@@ -48,6 +55,7 @@ First things first, you'll need to add a column to store the position. From the 
 
 ```php
 php artisan listify:attach {table_name} {position_column_name}
+
 php artisan migrate
 ```
 
@@ -58,9 +66,11 @@ Then, in your model:
 ```php
 <?php
 
+use EGALL\Listify\Listify;
+
 class User extends Eloquent
 {
-    use \EGALL\Listify\Listify;
+    use Listify;
 
     ...
 }
@@ -128,10 +138,11 @@ Example:
 
 ```php
 <?php
+use EGALL\Listify\Listify;
 
 class User extends Eloquent
 {
-    use \EGALL\Listify\Listify;
+    use Listify;
 
     public function __construct(array $attributes = []) {
 
