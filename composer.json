@@ -9,24 +9,33 @@
         "homepage": "http://lookitsatravis.com"
     }],
     "require": {
-        "php": ">=5.5.0",
-        "illuminate/database": "~5.0",
-        "illuminate/support": "~5.0",
-        "illuminate/console": "~5.0",
-        "illuminate/events": "~5.0"
+        "php": ">=7.2",
+        "illuminate/database": "~5.5|~6.0|~7.0",
+        "illuminate/support": "~5.5|~6.0|~7.0",
+        "illuminate/console": "~5.5|~6.0|~7.0",
+        "illuminate/events": "~5.5|~6.0|~7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0",
-        "satooshi/php-coveralls": "dev-master",
-        "way/phpunit-wrappers": "dev-master"
+        "phpunit/phpunit": "~8.0",
+        "php-coveralls/php-coveralls": "^2.1"
     },
     "autoload": {
-        "psr-0": {
-            "Lookitsatravis\\Listify": "src/"
+        "psr-4": {
+            "Lookitsatravis\\Listify\\": "src/"
         }
     },
     "autoload-dev": {
         "classmap": ["tests/models"]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "discard-changes": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lookitsatravis\\Listify\\ListifyServiceProvider"
+            ]
+        }
+    }
 }
