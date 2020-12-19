@@ -8,10 +8,10 @@ This project was originally created by [Travis Vignon](https://github.com/lookit
 
 Listify provides the capabilities for sorting and reordering a number of objects in a list. The class that has this specified needs to have a `position` column defined as an integer on the mapped database table. Listify is an Eloquent port of the highly useful Ruby gem `acts_as_list` (https://github.com/swanandp/acts_as_list).
 
-[![Latest Stable Version](https://poser.pugx.org/erikgall/laravel-listify/v)](//packagist.org/packages/erikgall/laravel-listify)
-[![Total Downloads](https://poser.pugx.org/erikgall/laravel-listify/downloads)](//packagist.org/packages/erikgall/laravel-listify)
-[![Latest Unstable Version](https://poser.pugx.org/erikgall/laravel-listify/v/unstable)](//packagist.org/packages/erikgall/laravel-listify)
-[![License](https://poser.pugx.org/erikgall/laravel-listify/license)](//packagist.org/packages/erikgall/laravel-listify)
+[![Latest Stable Version](https://poser.pugx.org/erikgall/listify/v)](//packagist.org/packages/erikgall/listify)
+[![Total Downloads](https://poser.pugx.org/erikgall/listify/downloads)](//packagist.org/packages/erikgall/listify)
+[![Latest Unstable Version](https://poser.pugx.org/erikgall/listify/v/unstable)](//packagist.org/packages/erikgall/listify)
+[![License](https://poser.pugx.org/erikgall/listify/license)](//packagist.org/packages/erikgall/listify)
 
 - [Description](#description)
 - [Requirements](#requirements)
