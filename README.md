@@ -1,5 +1,10 @@
 # Listify
 
+[![Latest Stable Version](https://poser.pugx.org/erikgall/listify/v)](//packagist.org/packages/erikgall/listify)
+[![Total Downloads](https://poser.pugx.org/erikgall/listify/downloads)](//packagist.org/packages/erikgall/listify)
+[![Latest Unstable Version](https://poser.pugx.org/erikgall/listify/v/unstable)](//packagist.org/packages/erikgall/listify)
+[![License](https://poser.pugx.org/erikgall/listify/license)](//packagist.org/packages/erikgall/listify)
+
 Turn any Eloquent model into a list!
 
 ## Description
@@ -7,11 +12,6 @@ Turn any Eloquent model into a list!
 This project was originally created by [Travis Vignon](https://github.com/lookitsatravis/listify) but is no longer maintained and only supported Laravel 5. This fork of the project provides support for Laravel 7 & 8 applications and will be updated as new Laravel versions are released. Please feel free to send in contributions and help keep this package up to date!
 
 Listify provides the capabilities for sorting and reordering a number of objects in a list. The class that has this specified needs to have a `position` column defined as an integer on the mapped database table. Listify is an Eloquent port of the highly useful Ruby gem `acts_as_list` (https://github.com/swanandp/acts_as_list).
-
-[![Latest Stable Version](https://poser.pugx.org/erikgall/listify/v)](//packagist.org/packages/erikgall/listify)
-[![Total Downloads](https://poser.pugx.org/erikgall/listify/downloads)](//packagist.org/packages/erikgall/listify)
-[![Latest Unstable Version](https://poser.pugx.org/erikgall/listify/v/unstable)](//packagist.org/packages/erikgall/listify)
-[![License](https://poser.pugx.org/erikgall/listify/license)](//packagist.org/packages/erikgall/listify)
 
 - [Description](#description)
 - [Requirements](#requirements)
@@ -33,7 +33,7 @@ Listify provides the capabilities for sorting and reordering a number of objects
 ## Requirements
 
 * Listify currently requires php >= 7.2.5
-* Laravel 7 and Laravel 8
+* Laravel 7 or Laravel 8
 
 ## Installation
 
@@ -43,6 +43,8 @@ Install Listify into your Laravel 8 application with composer:
 $ composer require erikgall/listify
 ```
 
+The Laravel 7 branch can be found here [erikgall/listify:2.x](https://github.com/erikgall/listify/tree/2.x)
+ 
 To install Listify into your Laravel 7 application with composer:
 
 ```shell
@@ -168,9 +170,11 @@ Example:
 ```php
 <?php
 
+use EGALL\Listify\Listify;
+
 class ToDoListItem extends Eloquent
 {
-    use \EGALL\Listify\Listify;
+    use Listify;
 
     public function __construct(array $attributes = []) {
 
