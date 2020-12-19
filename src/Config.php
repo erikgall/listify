@@ -1,9 +1,14 @@
 <?php
 
-namespace Lookitsatravis\Listify;
+namespace EGALL\Listify;
 
 use InvalidArgumentException;
 
+/**
+ * Listify configuration manager.
+ *
+ * @author Erik Galloway <egalloway@claruscare.com>
+ */
 class Config
 {
     const ADD_NEW_ITEM_TO_KEY = 'addNewItemTo';

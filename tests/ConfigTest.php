@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Lookitsatravis\Listify\Config;
+use EGALL\Listify\Config;
 
 class ConfigTest extends TestCase
 {
@@ -59,7 +59,7 @@ class ConfigTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
 
         // Grab ahold of the method and change its accessibility.
-        $method = new \ReflectionMethod('\Lookitsatravis\Listify\Config', 'assertKeyIsValid');
+        $method = new \ReflectionMethod(Config::class, 'assertKeyIsValid');
         $method->setAccessible(true);
 
         $method->invoke($this->config, 'foo');

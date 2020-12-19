@@ -1,6 +1,6 @@
 <?php
 
-namespace Lookitsatravis\Listify\Exceptions;
+namespace EGALL\Listify\Exceptions;
 
 use Exception;
 

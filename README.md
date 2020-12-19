@@ -4,33 +4,50 @@ Turn any Eloquent model into a list!
 
 ## Description
 
+This project was originally created by [Travis Vignon](https://github.com/lookitsatravis/listify) but is no longer maintained and only supported Laravel 5. This fork of the project provides support for Laravel 7 & 8 applications and will be updated as new Laravel versions are released. Please feel free to send in contributions and help keep this package up to date!
+
 Listify provides the capabilities for sorting and reordering a number of objects in a list. The class that has this specified needs to have a `position` column defined as an integer on the mapped database table. Listify is an Eloquent port of the highly useful Ruby gem `acts_as_list` (https://github.com/swanandp/acts_as_list).
 
-[![Build Status](https://travis-ci.org/lookitsatravis/listify.svg?branch=master)](https://secure.travis-ci.org/lookitsatravis/listify)
-[![Coverage Status](https://coveralls.io/repos/github/lookitsatravis/listify/badge.svg?branch=master)](https://coveralls.io/github/lookitsatravis/listify?branch=master) [![StyleCI](https://styleci.io/repos/13445373/shield?branch=develop)](https://styleci.io/repos/13445373)
-[![Latest Stable Version](https://poser.pugx.org/lookitsatravis/listify/v/stable.png)](https://packagist.org/packages/lookitsatravis/listify)
+[![Latest Stable Version](https://poser.pugx.org/erikgall/listify/v)](//packagist.org/packages/erikgall/listify)
+[![Total Downloads](https://poser.pugx.org/erikgall/listify/downloads)](//packagist.org/packages/erikgall/listify)
+[![Latest Unstable Version](https://poser.pugx.org/erikgall/listify/v/unstable)](//packagist.org/packages/erikgall/listify)
+[![License](https://poser.pugx.org/erikgall/listify/license)](//packagist.org/packages/erikgall/listify)
 
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Quick Start](#quickstart)
-* [Overview](#overview)
-* [Configuration](#configuration)
-* [Notes](#notes)
-* [Future Plans](#futureplans)
-* [Contributing](#contributing)
-* [Copyright](#copyright)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Quickstart](#quickstart)
+- [Overview](#overview)
+  - [Instance Methods Added To Eloquent Models](#instance-methods-added-to-eloquent-models)
+- [Configuration](#configuration)
+  - [String](#string)
+  - [Illuminate\Database\Eloquent\Relations\BelongsTo](#illuminatedatabaseeloquentrelationsbelongsto)
+  - [Illuminate\Database\Query\Builder](#illuminatedatabasequerybuilder)
+  - [Changing the configuration](#changing-the-configuration)
+- [Notes](#notes)
+- [Future Plans](#future-plans)
+- [Contributing to Listify](#contributing-to-listify)
+- [Copyright](#copyright)
 
 
 ## Requirements
 
-* Listify currently requires php >= 7.2
-* Laravel 5.5 or higher (the latest LTS version is recommended)
+* Listify currently requires php >= 7.2.5
+* Laravel 7 and Laravel 8
 
 ## Installation
 
-Simply require Listify in composer.
+Install Listify into your Laravel 8 application with composer:
 
-`composer require lookitsatravis/listify`
+```shell
+$ composer require erikgall/listify
+```
+
+To install Listify into your Laravel 7 application with composer:
+
+```shell
+$ composer require erikgall/listify:^2.0
+```
 
 ## Quickstart
 
@@ -38,6 +55,7 @@ First things first, you'll need to add a column to store the position. From the 
 
 ```php
 php artisan listify:attach {table_name} {position_column_name}
+
 php artisan migrate
 ```
 
@@ -48,9 +66,11 @@ Then, in your model:
 ```php
 <?php
 
+use EGALL\Listify\Listify;
+
 class User extends Eloquent
 {
-    use \Lookitsatravis\Listify\Listify;
+    use Listify;
 
     ...
 }
@@ -118,10 +138,11 @@ Example:
 
 ```php
 <?php
+use EGALL\Listify\Listify;
 
 class User extends Eloquent
 {
-    use \Lookitsatravis\Listify\Listify;
+    use Listify;
 
     public function __construct(array $attributes = []) {
 
@@ -149,7 +170,7 @@ Example:
 
 class ToDoListItem extends Eloquent
 {
-    use \Lookitsatravis\Listify\Listify;
+    use \EGALL\Listify\Listify;
 
     public function __construct(array $attributes = []) {
 
@@ -184,7 +205,7 @@ Example:
 
 class ToDoListItem extends Eloquent
 {
-    use \Lookitsatravis\Listify\Listify;
+    use \EGALL\Listify\Listify;
 
     public function __construct(array $attributes = []) {
 
@@ -245,8 +266,8 @@ Aside from that, I hope to just keep in parity with the Ruby gem `acts_as_list` 
 - Commit and push until you are happy with your contribution
 - Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 - Please try not to mess with the Composer.json, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-- I would recommend using Laravel 5.0 and higher for testing the build before a pull request.
+- I would recommend using Laravel 8.0 and higher for testing the build before a pull request.
 
 ## Copyright
 
-Copyright (c) 2013-2019 Travis Vignon, released under the MIT license
+Copyright (c) 2020 Erik Galloway, released under the MIT license

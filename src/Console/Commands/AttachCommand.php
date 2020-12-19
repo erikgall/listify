@@ -1,6 +1,6 @@
 <?php
 
-namespace Lookitsatravis\Listify\Console\Commands;
+namespace EGALL\Listify\Console\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
@@ -8,6 +8,11 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
+/**
+ * Generate a migration to attach listify to a model.
+ *
+ * @author Erik Galloway <egalloway@claruscare.com>
+ */
 class AttachCommand extends Command
 {
     /**
