@@ -34,7 +34,7 @@ class ListifyModelWithBelongstoScopeTest extends ListifyBaseTest
 
     public function test_passInNullScopeThrowsError()
     {
-        $this->expectException(\Lookitsatravis\Listify\Exceptions\NullScopeException::class);
+        $this->expectException(\EGALL\Listify\Exceptions\NullScopeException::class);
 
         $model = $this->model;
         $foo = new $model();
@@ -45,7 +45,7 @@ class ListifyModelWithBelongstoScopeTest extends ListifyBaseTest
 
     public function test_passInNullScopeWithForeignKeyThrowsError()
     {
-        $this->expectException(\Lookitsatravis\Listify\Exceptions\NullForeignKeyException::class);
+        $this->expectException(\EGALL\Listify\Exceptions\NullForeignKeyException::class);
 
         $model = $this->model;
         $foo = new $model();

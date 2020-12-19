@@ -1,10 +1,15 @@
 <?php
 
-namespace Lookitsatravis\Listify;
+namespace EGALL\Listify;
 
 use Illuminate\Support\ServiceProvider;
-use Lookitsatravis\Listify\Console\Commands\AttachCommand;
+use EGALL\Listify\Console\Commands\AttachCommand;
 
+/**
+ * Listify service provider.
+ *
+ * @author Erik Galloway <egalloway@claruscare.com>
+ */
 class ListifyServiceProvider extends ServiceProvider
 {
     /**
@@ -15,9 +20,7 @@ class ListifyServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if ($this->app->runningInConsole()) {
-            $this->commands([
-                AttachCommand::class,
-            ]);
+            $this->commands([AttachCommand::class]);
         }
     }
 

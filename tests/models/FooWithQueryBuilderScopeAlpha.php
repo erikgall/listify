@@ -1,6 +1,6 @@
 <?php
 
-use Lookitsatravis\Listify\Listify;
+use EGALL\Listify\Listify;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 

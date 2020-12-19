@@ -1,12 +1,11 @@
 {
-    "name": "lookitsatravis/listify",
-    "description": "Turn any Eloquent model into a list! http://lookitsatravis.github.io/listify",
+    "name": "erikgall/listify",
+    "description": "Turn any Eloquent model into a list! http://erikgall.github.io/listify",
     "keywords": ["laravel", "model", "position", "acts_as_list", "rails", "list", "eloquent", "order"],
     "license": "MIT",
     "authors": [{
-        "name": "Travis Vignon",
-        "email": "travis@lookitsatravis.com",
-        "homepage": "http://lookitsatravis.com"
+        "name": "Erik Galloway",
+        "email": "egalloway@claruscare.com"
     }],
     "require": {
         "php": ">=7.2",
@@ -21,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Lookitsatravis\\Listify\\": "src/"
+            "EGALL\\Listify\\": "src/"
         }
     },
     "autoload-dev": {
@@ -34,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Lookitsatravis\\Listify\\ListifyServiceProvider"
+                "EGALL\\Listify\\ListifyServiceProvider"
             ]
         }
     }

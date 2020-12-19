@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Lookitsatravis\Listify\Config;
+use EGALL\Listify\Config;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 class ListifyBaseTest extends TestCase
@@ -472,7 +472,7 @@ class ListifyBaseTest extends TestCase
 
     public function test_invalidScopeExceptionNonObject()
     {
-        $this->expectException(\Lookitsatravis\Listify\Exceptions\InvalidScopeException::class);
+        $this->expectException(\EGALL\Listify\Exceptions\InvalidScopeException::class);
 
         $foo = $this->model;
         $foo = new $foo();
@@ -483,7 +483,7 @@ class ListifyBaseTest extends TestCase
 
     public function test_invalidScopeExceptionObject()
     {
-        $this->expectException(\Lookitsatravis\Listify\Exceptions\InvalidScopeException::class);
+        $this->expectException(\EGALL\Listify\Exceptions\InvalidScopeException::class);
 
         $foo = $this->model;
         $foo = new $foo();

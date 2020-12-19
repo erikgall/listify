@@ -37,7 +37,7 @@ class ListifyModelWithQueryBuilderScopeTest extends ListifyBaseTest
 
     public function test_passScopeInWithMissingWhere()
     {
-        $this->expectException(\Lookitsatravis\Listify\Exceptions\InvalidQueryBuilderException::class);
+        $this->expectException(\EGALL\Listify\Exceptions\InvalidQueryBuilderException::class);
 
         $foo = new $this->model;
         $foo->name = $this->model.'New';

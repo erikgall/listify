@@ -1,21 +1,16 @@
 <?php
 
-namespace Lookitsatravis\Listify;
+namespace EGALL\Listify;
 
-use Lookitsatravis\Listify\Exceptions\InvalidQueryBuilderException;
-use Lookitsatravis\Listify\Exceptions\InvalidScopeException;
-use Lookitsatravis\Listify\Exceptions\NullForeignKeyException;
-use Lookitsatravis\Listify\Exceptions\NullScopeException;
+use EGALL\Listify\Exceptions\InvalidQueryBuilderException;
+use EGALL\Listify\Exceptions\InvalidScopeException;
+use EGALL\Listify\Exceptions\NullForeignKeyException;
+use EGALL\Listify\Exceptions\NullScopeException;
 
 /**
  * Gives some nice sorting features to a model.
  *
- * Ported from https://github.com/swanandp/acts_as_list
- *
- * @version 2.0.0
- *
- * @author Travis Vignon <travis@lookitsatravis.com>
- * @see http://lookitsatravis.github.io/listify
+ * @author Erik Galloway <egalloway@claruscare.com>
  */
 trait Listify
 {
@@ -78,7 +73,7 @@ trait Listify
     /**
      * Returns the Listify config. If it is new, a new instance will be instantiated.
      *
-     * @return \Lookitsatravis\Listify\Config
+     * @return \EGALL\Listify\Config
      */
     public function getListifyConfig()
     {
